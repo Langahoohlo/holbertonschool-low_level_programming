@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - this file is the main function
  *
  * Return: is string
