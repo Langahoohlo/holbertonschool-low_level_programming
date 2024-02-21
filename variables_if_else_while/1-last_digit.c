@@ -5,7 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - This program will asign a random to the variable n
+ * main - This program will asign a random to a variable
  *
  * Return: will always be 0
  */
@@ -21,9 +21,10 @@ int main(void)
 	lastDigit = n % 10;
 
 	{
-		if (lastDigit > 5)
+		if (lastDigit < 5)
 		{
-			printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastDigit);
+			printf("Last digit of %d is %d and is less
+				than 6 and not 0\n", n, lastDigit);
 		}
 		else if (lastDigit == 0)
 		{
