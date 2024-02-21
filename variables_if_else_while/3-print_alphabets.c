@@ -3,7 +3,7 @@
 /**
  * main - to print alphabets
  *
- * Return : will be a char
+ * Return: will be a char
  */
 
 int main(void)
