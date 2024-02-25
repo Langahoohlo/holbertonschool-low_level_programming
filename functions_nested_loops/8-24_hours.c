@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+* jack_bauer - function to print
+* Description: prints all minutes of the day
+*/
+
 void jack_bauer(void)
 {
 	int hrs = 0, mins = 0;
