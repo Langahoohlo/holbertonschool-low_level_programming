@@ -3,7 +3,6 @@
 
 /**
 * print_to_98 - print numbers number to 98
-* 
 * @num: integer argument
 */
 
