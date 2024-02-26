@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * _islower - check for lower case
- * @c : is an argument recievd to check if islower
- * Return : code exit
+ * _isupper - function to check for uppercase
+ * @c : is an argument recievd to check if isupper
+ * Return : 1 for uppercase 0 for lowercase
  */
 
 int _isupper(int c)
 {
-	if (c >= 65 && c >=90)
+	if (c >= 65 && c <= 90)
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
