@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - function to do fuzzbizz
- * Return : is always 0
+ * Return: is always 0
  */
 
 int main(void)
