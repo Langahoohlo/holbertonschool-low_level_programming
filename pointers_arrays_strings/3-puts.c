@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * _puts - function to recieve arument
+ * @str: argument to print
+ */
+
 void _puts(char *str)
 {
 	int n;
