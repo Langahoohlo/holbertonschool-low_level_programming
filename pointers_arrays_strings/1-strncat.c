@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _strcpy - function to to copy argument to another argument
+ * _strncat - function to to copy argument to another argument
  * @dest: argument recieved
  * @src: argument received
+ * @n: argument recieved
  * Return: return dest
  */
 
