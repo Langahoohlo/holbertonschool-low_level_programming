@@ -9,17 +9,17 @@
 
 int _atoi(char *s)
 {
-	int i = 0;
-	int n = 0;
+	int i = 1;
+	unsigned int num = 0;
 
-	for (i = 0; *s != '\0'; i++)
+	for (i = 1; *s != '\0'; s++)
 	{
 		if (*s == '-')
 			i *= -1;
 		else if (*s >= '0' && *s <= '9')
-			n = (n * 10) + (*s - '0');
-		else if (n > 0)
+			num = (num * 10) + (*s - '0');
+		else if (num > 0)
 			break;
 	}
-	return (i * n);
+	return (num * i);
 }
