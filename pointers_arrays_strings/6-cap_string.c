@@ -18,8 +18,8 @@ int is_separator(char c)
 		{
 			return (1);
 		}
-		return (0);
 	}
+	return (0);
 }
 
 char *cap_string(char *s)
