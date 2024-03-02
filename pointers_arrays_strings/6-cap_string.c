@@ -22,6 +22,12 @@ int is_separator(char c)
 	return (0);
 }
 
+/**
+ * cap_string - function to capitolize string
+ * @s: argument received
+ * Return: s
+ */
+
 char *cap_string(char *s)
 {
 	int i, cap = 1;
