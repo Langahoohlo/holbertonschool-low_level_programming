@@ -1,23 +1,34 @@
 #include "main.h"
 
+/**
+ * _strspn -function to get prefix of length
+ * @s:argument
+ * @accept:argument recieved
+ * Return:return count
+ */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int counter, i;
+	unsigned int count = 0;
 
-	for (i = 0; *s != '\0'; i++)
+	while (*s != '\0')
 	{
 		const char *acceptPtr = accept;
 
-		for (; *acceptPtr != '\0'; acceptPtr++)
+		while (*acceptPtr != '\0')
 		{
 			if (*acceptPtr == *s)
 			{
-				counter++;
+				count++;
 				break;
 			}
+			acceptPtr++;
 		}
 		if (*acceptPtr == '\0')
+		{
 			break;
+		}
+		s++;
 	}
-	return (counter);
+	return (count);
 }
