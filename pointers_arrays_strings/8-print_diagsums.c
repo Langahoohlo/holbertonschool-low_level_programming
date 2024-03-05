@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
-/*
+/**
  * print_diagsums - function to print square matrix
  * @a: argument recieved
  * @size: argument recieved

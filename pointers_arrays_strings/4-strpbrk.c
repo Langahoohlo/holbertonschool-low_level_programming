@@ -1,11 +1,11 @@
 #include "main.h"
 #include "stdio.h"
 
-/*
- * _strpbrk -
- * @s:
- * @accept:
- * Return:
+/**
+ * _strpbrk -function to seach for a string
+ * @s: argument recieved
+ * @accept:argument recieved
+ * Return: return s + j else null
  */
 
 char *_strpbrk(char *s, char *accept)

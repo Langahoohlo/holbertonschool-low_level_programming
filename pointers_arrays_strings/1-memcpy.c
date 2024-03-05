@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * _memcpy - function that copies n bytes from src to dest
  * @dest: destination to save bytes in
  * @src: bytres recieved as argument
