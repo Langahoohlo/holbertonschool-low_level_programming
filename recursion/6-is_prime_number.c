@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * is_prime_number - function to find prime number
+ * @n: argument to check number
+ * Return: Prime number
+ */
+
 int is_prime_number(int n)
 {
 	if (n <= 1)
@@ -8,6 +14,13 @@ int is_prime_number(int n)
 	}
 	return (prime_number(n, n - 1));
 }
+
+/**
+ * prime_number - function to return prime number
+ * @n: argument to check
+ * @i: argument recieved
+ * Return: prime number in in_prime_number
+ */
 
 int prime_number(int n, int i)
 {

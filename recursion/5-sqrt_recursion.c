@@ -1,5 +1,10 @@
 #include "main.h"
-#include <stdio.h>
+
+/**
+ * _sqrt_recursion: function to check for natural square root
+ * @n: number to use
+ * Return: square root
+ */
 
 int _sqrt_recursion(int n)
 {
@@ -30,6 +35,13 @@ int _sqrt_recursion(int n)
 		return (sqrt_odd(n, n - 2));
 	}
 }
+
+/**
+ * sqrt_odd - function to check for odd
+ * @check: number to check for odd number
+ * @n: argument to use for check
+ * Return: sqrt_odd
+ */
 
 int sqrt_odd(int check, int n)
 {
