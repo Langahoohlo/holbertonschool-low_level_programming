@@ -2,10 +2,10 @@
 #include "stdio.h"
 
 /**
- * _strstr -
- * @haystack:
- * @needle:
- * Return:
+ * _strstr - function to find argument
+ * @haystack: argument recieved
+ * @needle: argument to look for
+ * Return: haystack
  */
 
 char *_strstr(char *haystack, char *needle)
