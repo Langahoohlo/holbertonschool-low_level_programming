@@ -26,7 +26,7 @@ int *array_range(int min, int max)
 
 	currentIndex = arraySize - 1;
 
-	while (max - min)
+	while (max >= min)
 	{
 		resultArray[currentIndex] = max;
 		currentIndex--;
