@@ -4,8 +4,8 @@
 
 /**
  * string_nconcat - entry point to functio
- * s1: argument
- * s2: argument
+ * @s1: argument
+ * @s2: argument
  * @n: argument
  * Return: memory allocation
  */
