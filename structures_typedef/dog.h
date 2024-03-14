@@ -1,8 +1,8 @@
 #ifndef _DOG_H
 #define _DOG_H
 
-#include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * struct dog - about dog
  * @name: dog name
@@ -19,13 +19,14 @@ struct dog
 
 /**
  * d_t - typedef for struct
+ * init_dog - ....
+ * print_dog - ....
+ * @d: ....
+ * @name: ....
+ * @age: ....
+ * @owner: ....
  */
-
-typedef struct dog dog_t;
-
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
-dog_t new_dog(char *name, float age, char *owner);
-void free_dog(dog_t *d);
 
 #endif
