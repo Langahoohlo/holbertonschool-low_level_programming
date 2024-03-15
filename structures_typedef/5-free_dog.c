@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * free_dog - ....
+ * @dog_t: ....
+ */
+
 void free_dog(dog_t *d)
 {
 	if (d == NULL)
@@ -9,5 +14,5 @@ void free_dog(dog_t *d)
 
 	free(d->name);
 	free(d->owner);
-	free();
+	free(d);
 }
