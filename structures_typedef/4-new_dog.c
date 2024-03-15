@@ -2,7 +2,13 @@
 #include "main.h"
 #include <stdlib.h>
 
-char _strcpy(char *dest, char *src)
+/**
+ * _strcpy - ....
+ * @dest: ....
+ * @src: ....
+ */
+
+void _strcpy(char *dest, char *src)
 {
 	int i;
 
@@ -13,6 +19,14 @@ char _strcpy(char *dest, char *src)
 
 	dest[i] = '\0';
 }
+
+/**
+ * new_dog - ....
+ * @name: ....
+ * @age: .....
+ * @owner: .....
+ * Return: ....
+ */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
