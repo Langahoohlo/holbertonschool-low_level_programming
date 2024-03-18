@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * get_op_func: ....
+ * @s: ....
+ * Return: ....
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -18,7 +24,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (i < 0)
 	{
-		if (strcmp(s, ops[i].op) == 0)
+		if (ops[i].op[0] == s[0] && s[1] == '\0')
 			return (ops[i].f);
 
 		i++;
