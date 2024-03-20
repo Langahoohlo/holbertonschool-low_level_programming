@@ -59,7 +59,7 @@ void pr_str(va_list val)
 void print_all(const char * const format, ...)
 {
 	va_list ptr;
-	int i, j;
+	int i, j = 0;
 
 	p_op ops[] = {
 		{"c", pr_char},
@@ -71,16 +71,17 @@ void print_all(const char * const format, ...)
 
 	va_start(ptr, format);
 
-	while (format && format[i])
+	while (format != NULL && format[j] != '\0')
 	{
 		i = 0;
-		while(ops[i].op[0] == format[j])
+		while (ops[i].op != NULL)
 		{
-			if (ops[i].op[0] == format[i])
+			if (ops[i].op[0] == format[j])
 			{
 				(ops[i].f)(ptr);
-				if (format[j + 1])
+				if (format[j + 1] != 0)
 					printf(", ");
+				break;
 			}
 			i++;
 		}
@@ -88,5 +89,4 @@ void print_all(const char * const format, ...)
 	}
 	putchar('\n');
 	va_end(ptr);
-
 }
