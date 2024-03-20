@@ -44,11 +44,11 @@ void pr_str(va_list val)
 	switch (s != NULL)
 	{
 		case 1:
-			printf("%s");
+			printf("%s", s);
 			break;
 		case 0:
 			printf("(nil)");
-			break
+			break;
 	}
 }
 
