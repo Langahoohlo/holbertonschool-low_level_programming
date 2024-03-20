@@ -41,13 +41,14 @@ void pr_str(va_list val)
 {
 	char *s = va_arg(val, char *);
 
-	if (s != NULL)
+	switch (s != NULL)
 	{
-		printf("%s", s);
-	}
-	else
-	{
-		printf("(nil)");
+		case 1:
+			printf("%s");
+			break;
+		case 0:
+			printf("(nil)");
+			break
 	}
 }
 
