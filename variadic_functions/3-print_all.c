@@ -2,12 +2,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-typedef struct op
-{
-	char *op;
-	void (*f)(va_list);
-} p_op;
-
 /**
  * pr_int - .....
  * @val: ....
@@ -77,17 +71,20 @@ void print_all(const char * const format, ...)
 
 	va_start(ptr, format);
 
-	for (i = 0; format[i]; i++)
+	while (format && format[i])
 	{
-		for (j = 0; ops[j].op; j++)
+		i = 0;
+		while(ops[i].op[0] == format[j])
 		{
-			if (ops[j].op[0] == format[i])
+			if (ops[i].op[0] == format[i])
 			{
 				(ops[i].f)(ptr);
-				if (format[i + 1])
+				if (format[j + 1])
 					printf(", ");
 			}
+			i++;
 		}
+		j++;
 	}
 	putchar('\n');
 	va_end(ptr);
