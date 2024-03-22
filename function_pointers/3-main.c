@@ -11,7 +11,12 @@
 
 int main(int argc, char *argv[])
 {
-	int (*oprt)(int, int);
+	int (*f)(int, int);
+
+	int n1, n2;
+
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[3]);
 
 	if (argc != 4)
 	{
@@ -19,21 +24,22 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 
-	oprt = get_op_func(argv[2]);
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[3]);
+	f = get_op_func(argv[2]);
 
-	if ((argv[2][0] == '/' || argv[2][0] == '%')
-		&& argv[2][1] == '\0' && argv[3][0] == '0')
+	if (f == NULL || (argv[2][1] != '\0'))
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == '0')
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	if (!oprt)
-	{
-		printf("Error\n");
-		return (99);
-	}
+	printf("%d\n", f(n1, n2));
 
-	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
