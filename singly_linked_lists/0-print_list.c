@@ -5,7 +5,7 @@
 /**
  * print_list - function to print argument
  * @h: argument to print
- * return: h length
+ * Return: h
  */
 
 size_t print_list(const list_t *h)
