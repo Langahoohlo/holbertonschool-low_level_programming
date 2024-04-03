@@ -3,7 +3,7 @@
 
 /**
  * struct dlistint_s - doubly linked list
- * @n: integer
+ * @n: integer argument
  * @prev: points to the previous node
  * @next: points to the next node
  *
@@ -26,6 +26,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 void free_dlistint(dlistint_t *head);
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 int sum_dlistint(dlistint_t *head);
+
 /**
  * insert_dnodeint_at_index - inserts a new node at given index in the list
  * @head: pointer to head of the list
@@ -33,6 +34,7 @@ int sum_dlistint(dlistint_t *head);
  * @n: value of new node
  * Return: new node or null
  **/
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 int is_palind(void);

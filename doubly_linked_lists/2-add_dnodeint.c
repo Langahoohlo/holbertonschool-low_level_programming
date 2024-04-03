@@ -1,13 +1,14 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * add_dnodeint_end - .....
+ * add_dnodeint - .....
  * @head: ......
  * @n: ......
  * Return: ......
  */
 
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *newNode;
 	dlistint_t *h;
@@ -18,22 +19,23 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		return (NULL);
 
 	newNode->n = n;
-	newNode->next = NULL;
+	newNode->prev = NULL;
 
 	h = *head;
 
 	if (h != NULL)
 	{
-		while (h->next != NULL)
-			h = h->next;
-		h->next = newNode;
+		while (h->prev != NULL)
+			h = h->prev;
 	}
 
-	else
+	newNode->next = h;
+
+	if (h != NULL)
 	{
-		*head = newNode;
+		h->prev = newNode;
 	}
 
-	newNode->prev = h;
+	*head = newNode;
 	return (newNode);
 }
